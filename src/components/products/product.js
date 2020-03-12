@@ -7,7 +7,7 @@ const ProductItem = (props) => {
         <div className={itemClassName}>
             <div className="category">
                 <div className="ht__cat__thumb">
-                    <a href="product-details.html">
+                    <a href="/single">
                         <img src={product.thumb} alt="product images" />
                     </a>
                 </div>
@@ -21,7 +21,7 @@ const ProductItem = (props) => {
                     </ul>
                 </div>
                 <div className="fr__product__inner">
-                    <h4><a href="product-details.html">{product.name}</a></h4>
+                    <h4><a href="/single">{product.name}</a></h4>
                     <ul className="fr__pro__prize">
                         <li className="old__prize">{product.price}</li>
                         <li>{product.discount}</li>

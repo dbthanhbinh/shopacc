@@ -11,7 +11,7 @@ class Header extends React.Component {
                             <div className="menumenu__container clearfix">
                                 <div className="col-lg-2 col-md-2 col-sm-3 col-xs-5"> 
                                     <div className="logo">
-                                        <a href="index.html"><img src="assets/images/logo/4.png" alt="logo images" /></a>
+                                        <a href="/"><img src="assets/images/logo/4.png" alt="logo images" /></a>
                                     </div>
                                 </div>
                                 <div className="col-md-7 col-lg-8 col-sm-5 col-xs-3">
@@ -137,8 +137,8 @@ class Header extends React.Component {
                                             <a href="/"><i className="icon-user icons"></i></a>
                                         </div>
                                         <div className="htc__shopping__cart">
-                                            <a className="cart__menu" href="/"><i className="icon-handbag icons"></i></a>
-                                            <a href="/"><span className="htc__qua">2</span></a>
+                                            <a className="cart__menu" href="#"><i className="icon-handbag icons"></i></a>
+                                            <a href="#"><span className="htc__qua">2</span></a>
                                         </div>
                                     </div>
                                 </div>

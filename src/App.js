@@ -2,12 +2,13 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import './App.css'
 import {DefaultLayout} from './layouts'
-import {Home} from './containers'
+import {Home, SingleProduct} from './containers'
 class App extends React.PureComponent {
   
   buildPages () {
     return [
-      { path: '/home', key: 'home-page', render: () => this.withLayout(<Home />), exact: true },
+      { path: '/', key: 'home-page', render: () => this.withLayout(<Home />), exact: true },
+      { path: '/single', key: 'single-page', render: () => this.withLayout(<SingleProduct />), exact: true },
       { key: 'default', render: () => <Redirect to='/home' /> }
     ]
   }

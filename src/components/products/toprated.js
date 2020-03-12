@@ -7,12 +7,12 @@ const ProductItem = (props) => {
         <div className={itemClassName}>
             <div className="htc__best__product">
                 <div className="htc__best__pro__thumb">
-                    <a href="product-details.html">
+                    <a href="/single">
                         <img src="assets/images/product-2/sm-img-2/1.jpg" alt="small images" />
                     </a>
                 </div>
                 <div className="htc__best__product__details">
-                    <h2><a href="product-details.html">{product.name}</a></h2>
+                    <h2><a href="/single">{product.name}</a></h2>
                     <ul className="rating">
                         <li><i className="icon-star icons"></i></li>
                         <li><i className="icon-star icons"></i></li>
