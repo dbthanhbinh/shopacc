@@ -1,11 +1,11 @@
 import React from 'react'
-
 // UI Best seller
 import BestSeller from './bestseller'
 // Fake product data
 import {BestSellerData, ProductsData, TopRatedData} from '../../datas/products'
 import ProductItem from '../../components/products/product'
 import TopRated from '../../components/products/toprated'
+import Slider from '../slider'
 
 class Home extends React.PureComponent {
 
@@ -78,54 +78,9 @@ class Home extends React.PureComponent {
                         </div>
                     </div>
                 </div>
-                <div className="slider__container slider--one bg__cat--3">
-                    <div className="slide__container slider__activation__wrap owl-carousel">
-                        <div className="single__slide animation__style01 slider__fixed--height">
-                            <div className="container">
-                                <div className="row align-items__center">
-                                    <div className="col-md-7 col-sm-7 col-xs-12 col-lg-6">
-                                        <div className="slide">
-                                            <div className="slider__inner">
-                                                <h2>collection 2018</h2>
-                                                <h1>NICE CHAIR</h1>
-                                                <div className="cr__btn">
-                                                    <a href="cart.html">Shop Now</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6 col-sm-5 col-xs-12 col-md-5">
-                                        <div className="slide__thumb">
-                                            <img src="assets/images/slider/fornt-img/1.png" alt="slider images" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="single__slide animation__style01 slider__fixed--height">
-                            <div className="container">
-                                <div className="row align-items__center">
-                                    <div className="col-md-7 col-sm-7 col-xs-12 col-lg-6">
-                                        <div className="slide">
-                                            <div className="slider__inner">
-                                                <h2>collection 2018</h2>
-                                                <h1>NICE CHAIR</h1>
-                                                <div className="cr__btn">
-                                                    <a href="cart.html">Shop Now</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6 col-sm-5 col-xs-12 col-md-5">
-                                        <div className="slide__thumb">
-                                            <img src="assets/images/slider/fornt-img/2.png" alt="slider images" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+                {/* For slider */}
+                <Slider />
 
                 {
                     ProductsData

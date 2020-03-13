@@ -2,6 +2,30 @@ import React from 'react'
 
 class Brand extends React.PureComponent {
 
+    componentDidMount () {
+        window.$('.brand__list').owlCarousel({
+            loop: true,
+            margin:0,
+            nav:false,
+            autoplay: true,
+            autoplayTimeout: 10000,
+            items:5,
+            dots: false,
+            lazyLoad: true,
+            responsive: {
+              0: {
+                items: 2,
+              },
+              767: {
+                items: 4,
+              },
+              991: {
+                items: 5,
+              }
+            }
+        });
+    }
+
     render () {
         return (
             <div className="htc__brand__area bg__cat--4">

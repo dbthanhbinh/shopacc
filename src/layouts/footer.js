@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Newsletter from '../components/newsletter'
 class Footer extends React.Component {
 
     render () {
@@ -73,16 +73,7 @@ class Footer extends React.Component {
                             </div>
                             <div className="col-md-3 col-sm-6 col-xs-12 xmt-40 smt-40">
                                 <div className="footer">
-                                    <h2 className="title__line--2">NEWSLETTER </h2>
-                                    <div className="ft__inner">
-                                        <div className="news__input">
-                                            <input type="text" placeholder="Your Mail*" />
-                                            <div className="send__btn">
-                                                <a className="fr__btn" href="/">Send Mail</a>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
+                                    <Newsletter />
                                 </div>
                             </div>
                         </div>

@@ -2,6 +2,19 @@ import React from 'react'
 
 class Header extends React.Component {
 
+    componentDidMount () {
+        var win = window.$(window);
+        var sticky_id = window.$("#sticky-header-with-topbar");
+            win.on('scroll',function() {    
+            var scroll = win.scrollTop();
+            if (scroll < 245) {
+            sticky_id.removeClass("scroll-header");
+            }else{
+                sticky_id.addClass("scroll-header");
+            }
+        });
+    }
+
     render () {
         return (
             <header id="htc__header" className="htc__header__area header--one">
