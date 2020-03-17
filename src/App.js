@@ -1,4 +1,9 @@
 import React from 'react'
+
+import { Provider } from 'react-redux'
+import { createBrowserHistory } from 'history'
+import configureStore from './stores/configureStore'
+
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import './App.css'
 import {DefaultLayout, BlogLayout} from './layouts'
@@ -10,6 +15,14 @@ import {
   ProductsView,
   ShopCarts
 } from './containers'
+
+// Create browser history to use in the Redux store
+const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
+const history = createBrowserHistory({ basename: baseUrl });
+
+// Get the application-wide store instance, prepopulating with state from the server where available.
+const initialState = window.initialReduxState;
+const store = configureStore(history, initialState);
 class App extends React.PureComponent {
   
   buildPages () {
@@ -36,11 +49,13 @@ class App extends React.PureComponent {
 
   render () {
     return (
-      <Router>
-        <Switch>
-          {this.buildPages().map((router) => <Route {...router} />)}
-        </Switch>
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <Switch>
+            {this.buildPages().map((router) => <Route {...router} />)}
+          </Switch>
+        </Router>
+      </Provider>
     )
   }
 }
