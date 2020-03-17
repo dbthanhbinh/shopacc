@@ -1,5 +1,6 @@
 import {useState, useEffect, useCallback} from 'react'
 import {checkIsNotNullOrEmpry} from './utils'
+import './form.scss'
 
 const UseForm = (stateSchema = {}, validationSchema = {}, callback) => {
     const [state, setState] = useState(stateSchema)
@@ -57,7 +58,7 @@ const UseForm = (stateSchema = {}, validationSchema = {}, callback) => {
                     validationSchema[name].validator &&
                     typeof validationSchema[name].validator === 'object'
                 ) {
-                    if (value && !validationSchema[name].validator.regEx.test(value)) {
+                    if (value && validationSchema[name].validator.regEx && !validationSchema[name].validator.regEx.test(value)) {
                         error = validationSchema[name].validator.error
                     }
                 }

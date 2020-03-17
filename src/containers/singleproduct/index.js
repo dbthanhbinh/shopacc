@@ -3,6 +3,7 @@ import React from 'react'
 // Fake product data
 import {BestSellerData} from '../../datas/products'
 import ProductItem from '../../components/products/product'
+import Breadcrumb from '../../components/breadcrumbs'
 
 class SingleProduct extends React.Component {
 
@@ -10,25 +11,8 @@ class SingleProduct extends React.Component {
     render () {
         return (
             <React.Fragment>
-                <div className="ht__bradcaump__area" style={{background: 'rgba(0, 0, 0, 0) url(assets/images/bg/4.jpg) no-repeat scroll center center / cover'}}>
-                    <div className="ht__bradcaump__wrap">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-xs-12">
-                                    <div className="bradcaump__inner">
-                                        <nav className="bradcaump-inner">
-                                        <a className="breadcrumb-item" href="index.html">Home</a>
-                                        <span className="brd-separetor"><i className="zmdi zmdi-chevron-right"></i></span>
-                                        <a className="breadcrumb-item" href="product-grid.html">Products</a>
-                                        <span className="brd-separetor"><i className="zmdi zmdi-chevron-right"></i></span>
-                                        <span className="breadcrumb-item active">ean shirt</span>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Breadcrumb />
+                
                 <section className="htc__product__details bg__white ptb--100">
                     <div className="htc__product__details__top">
                         <div className="container">
