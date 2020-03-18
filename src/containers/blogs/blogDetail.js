@@ -1,5 +1,6 @@
 import React from 'react'
 import CommentArea from '../comments'
+import {ShowThumb} from '../../components/images/imageView'
 
 const BlogDetail = (props) => {
     return (
@@ -9,7 +10,11 @@ const BlogDetail = (props) => {
                     <div className="col-xs-12 col-lg-12">
                         <div className="htc__blog__details__wrap">
                             <div className="ht__bl__thumb">
-                                <img src="assets/images/blog/big-images/1.jpg" alt="blog images" />
+                                <ShowThumb
+                                    notALink={true}
+                                    src='assets/images/blog/md-img/2.jpg'
+                                    alt='blog images'
+                                />
                             </div>
                             <div className="bl__dtl">
                                 <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example,</p>
@@ -24,12 +29,20 @@ const BlogDetail = (props) => {
                                 <div className="row">
                                     <div className="col-lg-6">
                                         <div className="bl__img">
-                                            <img src="assets/images/blog/md-img/1.jpg" alt="blog images" />
+                                            <ShowThumb
+                                                notALink={true}
+                                                src='assets/images/blog/md-img/1.jpg'
+                                                alt='blog images'
+                                            />
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="bl__img">
-                                            <img src="assets/images/blog/md-img/2.jpg" alt="blog images" />
+                                            <ShowThumb
+                                                notALink={true}
+                                                src='assets/images/blog/md-img/2.jpg'
+                                                alt='blog images'
+                                            />
                                         </div>
                                     </div>
                                 </div>

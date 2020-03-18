@@ -1,13 +1,16 @@
 import React from 'react'
+import {ShowThumb} from '../../components/images/imageView'
 
 const ProductItemList = (props) => {
     let {product, itemClassName} = props
     return (
         <div className="ht__list__product">
             <div className="ht__list__thumb">
-                <a href="product-details.html">
-                    <img src="assets/images/product-2/pro-1/2.jpg" alt="product images" />
-                </a>
+                <ShowThumb
+                    permalink='product-details.html'
+                    src='assets/images/product-2/pro-1/2.jpg'
+                    alt='product images'
+                />
             </div>
             <div className="htc__list__details">
                 <h2><a href="product-details.html">{product.name}</a></h2>

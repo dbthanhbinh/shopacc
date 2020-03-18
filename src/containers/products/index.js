@@ -2,6 +2,7 @@ import React from 'react'
 import {ProductsData} from '../../datas/products'
 import ProductItem from '../../components/products/product'
 import ProductItemList from '../../components/products/productItemList'
+import {ShowThumb} from '../../components/images/imageView'
 
 const ProductsView = () => {
     return (
@@ -180,9 +181,11 @@ const ProductsView = () => {
                                 <div className="htc__recent__product__inner">
                                     <div className="htc__best__product">
                                         <div className="htc__best__pro__thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/images/product-2/sm-smg/1.jpg" alt="small product" />
-                                            </a>
+                                            <ShowThumb
+                                                src='assets/images/product-2/sm-smg/1.jpg'
+                                                alt='small product'
+                                                permalink='product-details.html'
+                                            />
                                         </div>
                                         <div className="htc__best__product__details">
                                             <h2><a href="product-details.html">Product Title Here</a></h2>
@@ -202,9 +205,11 @@ const ProductsView = () => {
                                     
                                     <div className="htc__best__product">
                                         <div className="htc__best__pro__thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/images/product-2/sm-smg/2.jpg" alt="small product" />
-                                            </a>
+                                            <ShowThumb
+                                                src='assets/images/product-2/sm-smg/1.jpg'
+                                                alt='small product'
+                                                permalink='product-details.html'
+                                            />
                                         </div>
                                         <div className="htc__best__product__details">
                                             <h2><a href="product-details.html">Product Title Here</a></h2>
@@ -224,9 +229,11 @@ const ProductsView = () => {
                                     
                                     <div className="htc__best__product">
                                         <div className="htc__best__pro__thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/images/product-2/sm-smg/1.jpg" alt="small product" />
-                                            </a>
+                                            <ShowThumb
+                                                src='assets/images/product-2/sm-smg/1.jpg'
+                                                alt='small product'
+                                                permalink='product-details.html'
+                                            />
                                         </div>
                                         <div className="htc__best__product__details">
                                             <h2><a href="product-details.html">Product Title Here</a></h2>

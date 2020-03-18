@@ -4,6 +4,7 @@ import React from 'react'
 import {BestSellerData} from '../../datas/products'
 import ProductItem from '../../components/products/product'
 import Breadcrumb from '../../components/breadcrumbs'
+import {ShowThumb} from '../../components/images/imageView'
 
 class SingleProduct extends React.Component {
 
@@ -22,31 +23,49 @@ class SingleProduct extends React.Component {
                                         <div className="product__big__images">
                                             <div className="portfolio-full-image tab-content">
                                                 <div role="tabpanel" className="tab-pane fade in active" id="img-tab-1">
-                                                    <img src="assets/images/product-2/big-img/1.jpg" alt="full" />
+                                                    <ShowThumb
+                                                        notALink='/single'
+                                                        src='assets/images/product-2/big-img/1.jpg'
+                                                        alt='product img'
+                                                    />
                                                 </div>
                                                 <div role="tabpanel" className="tab-pane fade" id="img-tab-2">
-                                                    <img src="assets/images/product-2/big-img/2.jpg" alt="full" />
+                                                    <ShowThumb
+                                                        notALink='/single'
+                                                        src='assets/images/product-2/big-img/1.jpg'
+                                                        alt='product img'
+                                                    />
                                                 </div>
                                                 <div role="tabpanel" className="tab-pane fade" id="img-tab-3">
-                                                    <img src="assets/images/product-2/big-img/3.jpg" alt="full" />
+                                                    <ShowThumb
+                                                        notALink='/single'
+                                                        src='assets/images/product-2/big-img/1.jpg'
+                                                        alt='product img'
+                                                    />
                                                 </div>
                                             </div>
                                         </div>
                                         <ul className="product__small__images" role="tablist">
                                             <li role="presentation" className="pot-small-img active">
-                                                <a href="#img-tab-1" role="tab" data-toggle="tab">
-                                                    <img src="assets/images/product-2/sm-img-3/3.jpg" alt="small" />
-                                                </a>
+                                                <ShowThumb
+                                                    permalink='#img-tab-1'
+                                                    src='assets/images/product-2/sm-img-3/3.jpg'
+                                                    alt='small'
+                                                />
                                             </li>
                                             <li role="presentation" className="pot-small-img">
-                                                <a href="#img-tab-2" role="tab" data-toggle="tab">
-                                                    <img src="assets/images/product-2/sm-img-3/1.jpg" alt="small" />
-                                                </a>
+                                                <ShowThumb
+                                                    permalink='#img-tab-2'
+                                                    src='assets/images/product-2/sm-img-3/3.jpg'
+                                                    alt='small'
+                                                />
                                             </li>
                                             <li role="presentation" className="pot-small-img">
-                                                <a href="#img-tab-3" role="tab" data-toggle="tab">
-                                                    <img src="assets/images/product-2/sm-img-3/2.jpg" alt="small" />
-                                                </a>
+                                                <ShowThumb
+                                                    permalink='#img-tab-3'
+                                                    src='assets/images/product-2/sm-img-3/3.jpg'
+                                                    alt='small'
+                                                />
                                             </li>
                                         </ul>
                                     </div>

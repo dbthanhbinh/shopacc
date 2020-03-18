@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {ShowThumb} from '../../components/images/imageView'
 class ViewCart extends React.Component {
 
     render () {
@@ -30,9 +30,11 @@ class ViewCart extends React.Component {
                         <div className="shp__cart__wrap">
                             <div className="shp__single__product">
                                 <div className="shp__pro__thumb">
-                                    <a href="/">
-                                        <img src="assets/images/product-2/sm-smg/1.jpg" alt="product images" />
-                                    </a>
+                                    <ShowThumb
+                                        permalink='/single'
+                                        src='assets/images/product-2/sm-smg/1.jpg'
+                                        alt='product images'
+                                    />
                                 </div>
                                 <div className="shp__pro__details">
                                     <h2><a href="product-details.html">BOPlay Wireless Speaker</a></h2>
@@ -45,9 +47,11 @@ class ViewCart extends React.Component {
                             </div>
                             <div className="shp__single__product">
                                 <div className="shp__pro__thumb">
-                                    <a href="/">
-                                        <img src="assets/images/product-2/sm-smg/2.jpg" alt="product images" />
-                                    </a>
+                                    <ShowThumb
+                                        permalink='/single'
+                                        src='assets/images/product-2/sm-smg/1.jpg'
+                                        alt='product images'
+                                    />
                                 </div>
                                 <div className="shp__pro__details">
                                     <h2><a href="product-details.html">Brone Candle</a></h2>

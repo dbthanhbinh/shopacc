@@ -1,4 +1,5 @@
 import React from 'react'
+import {ShowThumb} from '../../components/images/imageView'
 
 const ProductItem = (props) => {
     let {product, itemClassName} = props
@@ -7,9 +8,11 @@ const ProductItem = (props) => {
         <div className={itemClassName}>
             <div className="category">
                 <div className="ht__cat__thumb">
-                    <a href="/single">
-                        <img src={product.thumb} alt="product images" />
-                    </a>
+                    <ShowThumb
+                        permalink='/single'
+                        src={product.thumb}
+                        alt='product images'
+                    />
                 </div>
                 <div className="fr__hover__info">
                     <ul className="product__action">

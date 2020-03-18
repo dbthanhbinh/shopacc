@@ -1,4 +1,5 @@
 import React from 'react'
+import {ShowThumb} from '../../components/images/imageView'
 
 const BlogItem = (props) => {
     let {blog, itemClassName} = props
@@ -7,9 +8,11 @@ const BlogItem = (props) => {
         <div className={itemClassName}>
             <div className="blog">
                 <div className="blog__thumb">
-                    <a href="/blog-detail">
-                        <img src="assets/images/blog/blog-img/3.jpg" alt="blog images" />
-                    </a>
+                    <ShowThumb
+                        permalink='/blog-detail'
+                        src='assets/images/blog/blog-img/3.jpg'
+                        alt='blog images'
+                    />
                 </div>
                 <div className="blog__details">
                     <div className="bl__date">

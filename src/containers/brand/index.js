@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {ShowThumb} from '../../components/images/imageView'
 class Brand extends React.PureComponent {
 
     componentDidMount () {
@@ -34,14 +34,62 @@ class Brand extends React.PureComponent {
                         <div className="col-md-12">
                             <div className="ht__brand__inner">
                                 <ul className="brand__list owl-carousel clearfix">
-                                    <li><a href="/"><img src="assets/images/brand/1.png" alt="brand images" /></a></li>
-                                    <li><a href="/"><img src="assets/images/brand/2.png" alt="brand images" /></a></li>
-                                    <li><a href="/"><img src="assets/images/brand/3.png" alt="brand images" /></a></li>
-                                    <li><a href="/"><img src="assets/images/brand/4.png" alt="brand images" /></a></li>
-                                    <li><a href="/"><img src="assets/images/brand/5.png" alt="brand images" /></a></li>
-                                    <li><a href="/"><img src="assets/images/brand/5.png" alt="brand images" /></a></li>
-                                    <li><a href="/"><img src="assets/images/brand/1.png" alt="brand images" /></a></li>
-                                    <li><a href="/"><img src="assets/images/brand/2.png" alt="brand images" /></a></li>
+                                    <li>
+                                        <ShowThumb
+                                            permalink='/single'
+                                            src='assets/images/brand/1.png'
+                                            alt='brand images'
+                                        />
+                                    </li>
+                                    <li>
+                                        <ShowThumb
+                                            permalink='/single'
+                                            src='assets/images/brand/2.png'
+                                            alt='brand images'
+                                        />
+                                    </li>
+                                    <li>
+                                        <ShowThumb
+                                            permalink='/single'
+                                            src='assets/images/brand/3.png'
+                                            alt='brand images'
+                                        />
+                                    </li>
+                                    <li>
+                                        <ShowThumb
+                                            permalink='/single'
+                                            src='assets/images/brand/4.png'
+                                            alt='brand images'
+                                        />
+                                    </li>
+                                    <li>
+                                        <ShowThumb
+                                            permalink='/single'
+                                            src='assets/images/brand/5.png'
+                                            alt='brand images'
+                                        />
+                                    </li>
+                                    <li>
+                                        <ShowThumb
+                                            permalink='/single'
+                                            src='assets/images/brand/1.png'
+                                            alt='brand images'
+                                        />
+                                    </li>
+                                    <li>
+                                        <ShowThumb
+                                            permalink='/single'
+                                            src='assets/images/brand/4.png'
+                                            alt='brand images'
+                                        />
+                                    </li>
+                                    <li>
+                                        <ShowThumb
+                                            permalink='/single'
+                                            src='assets/images/brand/3.png'
+                                            alt='brand images'
+                                        />
+                                    </li>
                                 </ul>
                             </div>
                         </div>
