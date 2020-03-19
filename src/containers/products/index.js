@@ -72,11 +72,11 @@ const ProductsView = () => {
                                 <div className="row">
                                     <div className="col-xs-12">
                                         <ul className="htc__pagenation">
-                                        <li><a href="#"><i className="zmdi zmdi-chevron-left"></i></a></li> 
-                                        <li><a href="#">1</a></li> 
-                                        <li className="active"><a href="#">3</a></li>   
-                                        <li><a href="#">19</a></li> 
-                                        <li><a href="#"><i className="zmdi zmdi-chevron-right"></i></a></li> 
+                                        <li><a href="/"><i className="zmdi zmdi-chevron-left"></i></a></li> 
+                                        <li><a href="/">1</a></li> 
+                                        <li className="active"><a href="/">3</a></li>   
+                                        <li><a href="/">19</a></li> 
+                                        <li><a href="/"><i className="zmdi zmdi-chevron-right"></i></a></li> 
                                         </ul>
                                     </div>
                                 </div>
@@ -101,7 +101,7 @@ const ProductsView = () => {
                                                         <span>Price :</span><input type="text" id="amount" readOnly />
                                                     </div>
                                                     <div className="price--filter">
-                                                        <a href="#">Filter</a>
+                                                        <a href="/">Filter</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -112,67 +112,67 @@ const ProductsView = () => {
                             <div className="htc__category">
                                 <h4 className="title__line--4">categories</h4>
                                 <ul className="ht__cat__list">
-                                    <li><a href="#">Clothing</a></li>
-                                    <li><a href="#">Bags</a></li>
-                                    <li><a href="#">Shoes</a></li>
-                                    <li><a href="#">Jewelry</a></li>
-                                    <li><a href="#">Accessories</a></li>
-                                    <li><a href="#">Food / Drink Store</a></li>
-                                    <li><a href="#">Gift Store</a></li>
-                                    <li><a href="#">Accessories</a></li>
-                                    <li><a href="#">Watch</a></li>
-                                    <li><a href="#">Other</a></li>
+                                    <li><a href="/">Clothing</a></li>
+                                    <li><a href="/">Bags</a></li>
+                                    <li><a href="/">Shoes</a></li>
+                                    <li><a href="/">Jewelry</a></li>
+                                    <li><a href="/">Accessories</a></li>
+                                    <li><a href="/">Food / Drink Store</a></li>
+                                    <li><a href="/">Gift Store</a></li>
+                                    <li><a href="/">Accessories</a></li>
+                                    <li><a href="/">Watch</a></li>
+                                    <li><a href="/">Other</a></li>
                                 </ul>
                             </div>
 
                             <div className="ht__pro__color">
                                 <h4 className="title__line--4">color</h4>
                                 <ul className="ht__color__list">
-                                    <li className="grey"><a href="#">grey</a></li>
-                                    <li className="lamon"><a href="#">lamon</a></li>
-                                    <li className="white"><a href="#">white</a></li>
-                                    <li className="red"><a href="#">red</a></li>
-                                    <li className="black"><a href="#">black</a></li>
-                                    <li className="pink"><a href="#">pink</a></li>
+                                    <li className="grey"><a href="/">grey</a></li>
+                                    <li className="lamon"><a href="/">lamon</a></li>
+                                    <li className="white"><a href="/">white</a></li>
+                                    <li className="red"><a href="/">red</a></li>
+                                    <li className="black"><a href="/">black</a></li>
+                                    <li className="pink"><a href="/">pink</a></li>
                                 </ul>
                             </div>
                             
                             <div className="ht__pro__size">
                                 <h4 className="title__line--4">Size</h4>
                                 <ul className="ht__size__list">
-                                    <li><a href="#">xs</a></li>
-                                    <li><a href="#">s</a></li>
-                                    <li><a href="#">m</a></li>
-                                    <li><a href="#">reld</a></li>
-                                    <li><a href="#">xl</a></li>
+                                    <li><a href="/">xs</a></li>
+                                    <li><a href="/">s</a></li>
+                                    <li><a href="/">m</a></li>
+                                    <li><a href="/">reld</a></li>
+                                    <li><a href="/">xl</a></li>
                                 </ul>
                             </div>
                             
                             <div className="htc__tag">
                                 <h4 className="title__line--4">tags</h4>
                                 <ul className="ht__tag__list">
-                                    <li><a href="#">Clothing</a></li>
-                                    <li><a href="#">bag</a></li>
-                                    <li><a href="#">Shoes</a></li>
-                                    <li><a href="#">Jewelry</a></li>
-                                    <li><a href="#">Food</a></li>
-                                    <li><a href="#">Aceessories</a></li>
-                                    <li><a href="#">Store</a></li>
-                                    <li><a href="#">Watch</a></li>
-                                    <li><a href="#">Other</a></li>
+                                    <li><a href="/">Clothing</a></li>
+                                    <li><a href="/">bag</a></li>
+                                    <li><a href="/">Shoes</a></li>
+                                    <li><a href="/">Jewelry</a></li>
+                                    <li><a href="/">Food</a></li>
+                                    <li><a href="/">Aceessories</a></li>
+                                    <li><a href="/">Store</a></li>
+                                    <li><a href="/">Watch</a></li>
+                                    <li><a href="/">Other</a></li>
                                 </ul>
                             </div>
                             
                             <div className="htc__compare__area">
                                 <h4 className="title__line--4">compare</h4>
                                 <ul className="htc__compare__list">
-                                    <li><a href="#">White men’s polo<i className="icon-trash icons"></i></a></li>
-                                    <li><a href="#">T-shirt for style girl...<i className="icon-trash icons"></i></a></li>
-                                    <li><a href="#">Basic dress for women...<i className="icon-trash icons"></i></a></li>
+                                    <li><a href="/">White men’s polo<i className="icon-trash icons"></i></a></li>
+                                    <li><a href="/">T-shirt for style girl...<i className="icon-trash icons"></i></a></li>
+                                    <li><a href="/">Basic dress for women...<i className="icon-trash icons"></i></a></li>
                                 </ul>
                                 <ul className="ht__com__btn">
-                                    <li><a href="#">clear all</a></li>
-                                    <li className="compare"><a href="#">Compare</a></li>
+                                    <li><a href="/">clear all</a></li>
+                                    <li className="compare"><a href="/">Compare</a></li>
                                 </ul>
                             </div>
                             

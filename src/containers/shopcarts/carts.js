@@ -11,8 +11,8 @@ import CartEmpty from './cartEmpty'
 import {CartsData} from '../../datas/carts'
 import ViewPrice from './viewPrice'
 import CouponForm from './couponForm'
-import ApplyShipping from './shipping'
-import ApplyTax from './tax'
+// import ApplyShipping from './shipping'
+// import ApplyTax from './tax'
 
 const ShopCarts = (props) => {
     let cartsTotal = 0
@@ -79,11 +79,11 @@ const ShopCarts = (props) => {
                                 <div className="col-md-12 col-sm-12 col-xs-12">
                                     <div className="buttons-cart--inner">
                                         <div className="buttons-cart">
-                                            <a href="#">Continue Shopping</a>
+                                            <a href="/">Continue Shopping</a>
                                         </div>
                                         <div className="buttons-cart checkout--btn">
-                                            <a href="#">update</a>
-                                            <a href="#">checkout</a>
+                                            <a href="/">update</a>
+                                            <a href="/">checkout</a>
                                         </div>
                                     </div>
                                 </div>
@@ -116,8 +116,8 @@ const ShopCarts = (props) => {
                                             <span>{ViewPrice(shopCartsTotal)}</span>
                                         </div>
                                         <ul className="payment__btn">
-                                            <li className="active"><a href="#">payment</a></li>
-                                            <li><a href="#">continue shopping</a></li>
+                                            <li className="active"><a href="/">payment</a></li>
+                                            <li><a href="/">continue shopping</a></li>
                                         </ul>
                                     </div>
                                 </div>

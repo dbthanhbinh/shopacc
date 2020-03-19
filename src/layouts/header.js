@@ -154,8 +154,8 @@ class Header extends React.Component {
                                             <a href="/"><i className="icon-user icons"></i></a>
                                         </div>
                                         <div className="htc__shopping__cart">
-                                            <a className="cart__menu" href="#"><i className="icon-handbag icons"></i></a>
-                                            <a href="#"><span className="htc__qua">2</span></a>
+                                            <a className="cart__menu" href="/"><i className="icon-handbag icons"></i></a>
+                                            <a href="/"><span className="htc__qua">2</span></a>
                                         </div>
                                     </div>
                                 </div>

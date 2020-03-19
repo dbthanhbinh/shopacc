@@ -1,12 +1,11 @@
-import {useState, useEffect, useCallback} from 'react'
 import _ from 'lodash'
 
 const CalculatorCartItem = (cart) => {
-    let price = cart && cart.price || 0
-    let oldPrice = cart && cart.price || 0
-    let discount = cart && cart.discount || 0
-    let unitPrice = cart && cart.price || 0
-    let quantity = cart && cart.quantity || 1
+    let price = (cart && cart.price) ? cart.price : 0
+    let oldPrice = (cart && cart.price) ? cart.price : 0
+    let discount = (cart && cart.discount) ? cart.discount : 0
+    let unitPrice = (cart && cart.price) ? cart.price : 0
+    let quantity = (cart && cart.quantity) ? cart.quantity : 1
     let subTotal = 0
 
     const getUnitPrice = (price, discount) => {

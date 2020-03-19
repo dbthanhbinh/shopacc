@@ -14,7 +14,7 @@ const CartItem = (cart, onRemoveItem) => {
                     alt='product img'
                 />
                 </td>
-                <td className="product-name"><a href="#">{cart.name}</a>
+                <td className="product-name"><a href="/">{cart.name}</a>
                 <ul  className="pro__prize">
                     <li className="old__prize">{ViewPrice(oldPrice)}</li>
                     <li>{ViewPrice(discount)}</li>

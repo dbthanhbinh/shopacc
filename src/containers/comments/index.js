@@ -21,9 +21,9 @@ class CommentArea extends React.PureComponent {
                             </div>
                             <div className="ht__comment__details">
                                 <div className="ht__comment__title">
-                                    <h2><a href="#">JOHN NGUYEN</a></h2>
+                                    <h2><a href="/">JOHN NGUYEN</a></h2>
                                     <div className="reply__btn">
-                                        <a href="#">reply</a>
+                                        <a href="/">reply</a>
                                     </div>
                                 </div>
                                 <span>July 15, 2016 at 2:39 am</span>
@@ -40,9 +40,9 @@ class CommentArea extends React.PureComponent {
                             </div>
                             <div className="ht__comment__details">
                                 <div className="ht__comment__title">
-                                    <h2><a href="#">JOHN NGUYEN</a></h2>
+                                    <h2><a href="/">JOHN NGUYEN</a></h2>
                                     <div className="reply__btn">
-                                        <a href="#">reply</a>
+                                        <a href="/">reply</a>
                                     </div>
                                 </div>
                                 <span>July 15, 2016 at 2:39 am</span>
@@ -59,9 +59,9 @@ class CommentArea extends React.PureComponent {
                             </div>
                             <div className="ht__comment__details">
                                 <div className="ht__comment__title">
-                                    <h2><a href="#">JOHN NGUYEN</a></h2>
+                                    <h2><a href="/">JOHN NGUYEN</a></h2>
                                     <div className="reply__btn">
-                                        <a href="#">reply</a>
+                                        <a href="/">reply</a>
                                     </div>
                                 </div>
                                 <span>July 15, 2016 at 2:39 am</span>

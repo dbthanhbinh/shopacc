@@ -1,26 +1,28 @@
 import React from 'react'
+import _ from 'lodash'
 const ShowLogo = (props) => {
-    let {src, permalink, classname, alt, title, notALink} = props
-    let customclassname = (classname && classname !== '') ? `className='${classname}'` : ''
-    let customtitle = title ? `title='${title}'` : ''
+    let {permalink, notALink, alt, src} = props
+    let otherProps = _.pick(props, ['className', 'title'])
+
+    let imgView = <img src={src} alt={alt || ''} {...otherProps} />
     if(notALink) {
-        return <img src={src} customclassname customtitle  alt={alt || ''} />
+        return imgView
     } else {
-        return <a href={permalink}>
-            <img src={src} customclassname customtitle alt={alt || ''} />
+        return <a href={permalink || '/'}>
+            {imgView}
         </a>
     }
 }
 
 const ShowThumb = (props) => {
-    let {src, permalink, classname, alt, title, notALink} = props
-    let customtitle = title ? `title='${title}'` : ''
-    let customclassname = (classname && classname !== '') ? `className='${classname}'` : ''
+    let {permalink, notALink, alt, src} = props
+    let otherProps = _.pick(props, ['className', 'title'])
+    let imgView = <img src={src} alt={alt || ''} {...otherProps} />
     if(notALink) {
-        return <img src={src} customclassname  customtitle alt={alt || ''} />
+        return imgView
     } else {
-        return <a href={permalink}>
-            <img src={src} customclassname customtitle alt={alt || ''} />
+        return <a href={permalink || '/'}>
+            {imgView}
         </a>
     }
 }
