@@ -1,5 +1,8 @@
 import React from 'react'
 import {ShowLogo} from '../components/images/imageView'
+
+import {HeaderMenuData} from '../datas/headerMenu'
+import TreeMenu from './treeMenu'
 class Header extends React.Component {
 
     componentDidMount () {
@@ -14,6 +17,7 @@ class Header extends React.Component {
             }
         });
     }
+
 
     render () {
         return (
@@ -33,7 +37,13 @@ class Header extends React.Component {
                                 </div>
                                 <div className="col-md-7 col-lg-8 col-sm-5 col-xs-3">
                                     <nav className="main__menu__nav hidden-xs hidden-sm">
-                                        <ul className="main__menu">
+                                    <ul className="main__menu">
+                                    {
+                                        TreeMenu({HeaderMenuData, parentId: null})
+                                    }
+                                    </ul>
+                                    
+                                        {/* <ul className="main__menu">
                                             <li className="drop"><a href="index.html">Home</a></li>
                                             <li className="drop"><a href="/">women</a>
                                                 <ul className="dropdown mega_dropdown">
@@ -120,7 +130,7 @@ class Header extends React.Component {
                                                 </ul>
                                             </li>
                                             <li><a href="contact.html">contact</a></li>
-                                        </ul>
+                                        </ul> */}
                                     </nav>
 
                                     <div className="mobile-menu clearfix visible-xs visible-sm">
