@@ -4,7 +4,7 @@ import _ from 'lodash'
 function findChild (HeaderMenuData, newParentId) {
     if(_.isEmpty(HeaderMenuData)) return null
      let newList = HeaderMenuData.filter((x) => x.parentId === newParentId)
-    return newList
+    return newList && newList.length > 0
 }
 
 function TreeMenu({HeaderMenuData, parentId}){
