@@ -1,4 +1,5 @@
 import React from 'react'
+import {ShowThumb} from '../../components/images/imageView'
 
 class Slider extends React.PureComponent {
 
@@ -52,7 +53,11 @@ class Slider extends React.PureComponent {
                                 </div>
                                 <div className="col-lg-6 col-sm-5 col-xs-12 col-md-5">
                                     <div className="slide__thumb">
-                                        <img src="assets/images/slider/fornt-img/1.png" alt="slider images" />
+                                        <ShowThumb
+                                            notALink={true}
+                                            src='assets/images/slider/fornt-img/1.png'
+                                            alt='slider images'
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -74,7 +79,11 @@ class Slider extends React.PureComponent {
                                 </div>
                                 <div className="col-lg-6 col-sm-5 col-xs-12 col-md-5">
                                     <div className="slide__thumb">
-                                        <img src="assets/images/slider/fornt-img/2.png" alt="slider images" />
+                                        <ShowThumb
+                                            notALink={true}
+                                            src='assets/images/slider/fornt-img/1.png'
+                                            alt='slider images'
+                                        />
                                     </div>
                                 </div>
                             </div>

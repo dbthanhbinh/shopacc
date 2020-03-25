@@ -6,6 +6,7 @@ import {BestSellerData, ProductsData, TopRatedData} from '../../datas/products'
 import ProductItem from '../../components/products/product'
 import TopRated from '../../components/products/toprated'
 import Slider from '../slider'
+import {ShowThumb} from '../../components/images/imageView'
 
 class Home extends React.PureComponent {
 
@@ -59,7 +60,11 @@ class Home extends React.PureComponent {
                             <div className="col-md-6 col-lg-6 col-sm-6 col-xs-12">
                                 <div className="prize__inner">
                                     <div className="prize__thumb">
-                                        <img src="assets/images/banner/big-img/1.png" alt="banner images" />
+                                        <ShowThumb
+                                            src='assets/images/banner/big-img/1.png'
+                                            alt='banner images'
+                                            notALink={true}
+                                        />
                                     </div>
                                     <div className="banner__info">
                                         <div className="pointer__tooltip pointer--3 align-left">
@@ -108,7 +113,11 @@ class Home extends React.PureComponent {
                                 <div className="col-lg-6 col-md-6 single__tes">
                                     <div className="testimonial">
                                         <div className="testimonial__thumb">
-                                            <img src="assets/images/test/client/1.png" alt="testimonial images" />
+                                            <ShowThumb
+                                                src='assets/images/banner/big-img/1.png'
+                                                alt='banner images'
+                                                notALink={true}
+                                            />
                                         </div>
                                         <div className="testimonial__details">
                                             <h4><a href="/">Mr.Mike Band</a></h4>
@@ -119,7 +128,11 @@ class Home extends React.PureComponent {
                                 <div className="col-lg-6 col-md-6 single__tes">
                                     <div className="testimonial">
                                         <div className="testimonial__thumb">
-                                            <img src="assets/images/test/client/2.png" alt="testimonial images" />
+                                            <ShowThumb
+                                                src='assets/images/banner/big-img/1.png'
+                                                alt='banner images'
+                                                notALink={true}
+                                            />
                                         </div>
                                         <div className="testimonial__details">
                                             <h4><a href="/">Ms.Lucy Barton</a></h4>
@@ -130,7 +143,11 @@ class Home extends React.PureComponent {
                                 <div className="col-lg-6 col-md-6 single__tes">
                                     <div className="testimonial">
                                         <div className="testimonial__thumb">
-                                            <img src="assets/images/test/client/1.png" alt="testimonial images" />
+                                            <ShowThumb
+                                                src='assets/images/banner/big-img/1.png'
+                                                alt='banner images'
+                                                notALink={true}
+                                            />
                                         </div>
                                         <div className="testimonial__details">
                                             <h4><a href="/">Ms.Lucy Barton</a></h4>
@@ -141,7 +158,11 @@ class Home extends React.PureComponent {
                                 <div className="col-lg-6 col-md-6 single__tes">
                                     <div className="testimonial">
                                         <div className="testimonial__thumb">
-                                            <img src="assets/images/test/client/2.png" alt="testimonial images" />
+                                            <ShowThumb
+                                                src='assets/images/banner/big-img/1.png'
+                                                alt='banner images'
+                                                notALink={true}
+                                            />
                                         </div>
                                         <div className="testimonial__details">
                                             <h4><a href="/">Ms.Lucy Barton</a></h4>

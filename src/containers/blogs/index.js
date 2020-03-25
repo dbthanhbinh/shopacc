@@ -26,14 +26,14 @@ class Blogs extends React.PureComponent {
                         <div className="row">
                             <div className="col-xs-12">
                                 <ul className="htc__pagenation">
-                                <li><a href="#"><i className="zmdi zmdi-chevron-left"></i></a></li> 
-                                <li><a href="#">1</a></li> 
-                                <li><a href="#">2</a></li> 
-                                <li><a href="#">3</a></li> 
-                                <li><a href="#">4</a></li> 
-                                <li><a href="#"><i className="zmdi zmdi-more"></i></a></li> 
-                                <li><a href="#">19</a></li> 
-                                <li className="active"><a href="#"><i className="zmdi zmdi-chevron-right"></i></a></li> 
+                                <li><a href="/"><i className="zmdi zmdi-chevron-left"></i></a></li> 
+                                <li><a href="/">1</a></li> 
+                                <li><a href="/">2</a></li> 
+                                <li><a href="/">3</a></li> 
+                                <li><a href="/">4</a></li> 
+                                <li><a href="/"><i className="zmdi zmdi-more"></i></a></li> 
+                                <li><a href="/">19</a></li> 
+                                <li className="active"><a href="/"><i className="zmdi zmdi-chevron-right"></i></a></li> 
                                 </ul>
                             </div>
                         </div>
