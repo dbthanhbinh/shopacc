@@ -1,7 +1,17 @@
 import _ from 'lodash'
 const initialState = {
     cartList: [],
-    cartDetail: null
+    cartDetail: {
+        cartTotal: 0,
+        cartTax: 0,
+        cartShipping: 0,
+        cartCoupon: 0,
+        cartCouponCode: null,
+        orderTotal: 0,
+        buyer: null,
+        receiver: null,
+        payment: null
+    }
 }
 
 export const actionCreators = {
@@ -15,19 +25,30 @@ export const reducer = (state, action) => {
     switch (action.type) {
         case 'FETCH_CARTS':
             return {
-                ...state,
                 cartList: action.cartList
             }
         case 'ADD_TO_CART':
-            return {
-                ...state,
-                cartList: [state.cartList, action.cart]
+            // check itemId arealdy exited
+            let indexExited = state.cartList.findIndex(
+                (f) => f.itemId === action.cart.itemId
+            )
+
+            if(indexExited === -1) {
+                let newCartList = [...state.cartList, action.cart]
+                return {
+                    cartList: newCartList
+                }
+            } else {
+                state.cartList[indexExited].quantity += 1
+                let newCartList = [...state.cartList]
+                return {
+                    cartList: newCartList
+                }
             }
         case 'REMOVE_FROM_CART':
             let _cartList = _.get(state, 'cartList')
-            let filterList = _cartList.filter((f) => f.id !== action.cartId)
+            let filterList = _cartList.filter((f) => f.itemId !== action.cartId)
             return {
-                ...state,
                 cartList: filterList
             }
         default:

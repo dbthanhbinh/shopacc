@@ -4,7 +4,10 @@ import ProductItem from '../../components/products/product'
 import ProductItemList from '../../components/products/productItemList'
 import {ShowThumb} from '../../components/images/imageView'
 
+import ShoppingCart from '../../components/shopping-cart'
 const ProductsView = () => {
+    let {addToCart, shopCarts} = ShoppingCart()
+
     return (
         <section className="htc__product__grid bg__white ptb--100">
             <div className="container">
@@ -42,7 +45,8 @@ const ProductsView = () => {
                                             <div role="tabpanel" id="grid-view" className="single-grid-view tab-pane fade in active clearfix">
                                                 {
                                                     ProductsData.map((product) => {
-                                                        return <ProductItem 
+                                                        return <ProductItem
+                                                            addToCart={addToCart}
                                                             key={product.id}
                                                             product={product}
                                                             itemClassName='col-md-4 col-lg-4 col-sm-6 col-xs-12'
@@ -80,6 +84,10 @@ const ProductsView = () => {
                                         </ul>
                                     </div>
                                 </div>
+
+                                {
+                                    shopCarts()
+                                }
                     
                             </React.Fragment>
                         }

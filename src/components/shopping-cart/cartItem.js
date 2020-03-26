@@ -1,7 +1,7 @@
 import React from 'react'
-import CalculatorCartItem from './calculatorCartItem'
-import ViewPrice from './viewPrice'
-import {ShowThumb} from '../../components/images/imageView'
+import CalculatorCartItem from '../../containers/shopcarts/calculatorCartItem'
+import ViewPrice from '../../containers/shopcarts/viewPrice'
+import {ShowThumb} from '../images/imageView'
 
 const CartItem = (cart, onRemoveItem) => {
     let {oldPrice, price, discount, quantity, subTotal} = CalculatorCartItem(cart)
