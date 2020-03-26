@@ -17,7 +17,8 @@ const initialState = {
 export const actionCreators = {
     getCarts: (cartList) => ({type: 'FETCH_CARTS', cartList}),
     addToCart: (cart) => ({type: 'ADD_TO_CART', cart}),
-    removeFromCart: (cartId) => ({type: 'REMOVE_FROM_CART', cartId})
+    removeFromCart: (cartId) => ({type: 'REMOVE_FROM_CART', cartId}),
+    updateCartTotal: (cartTotal) => ({type: 'UPDATE_CART_TOTAL', cartTotal})
 }
 
 export const reducer = (state, action) => {
@@ -50,6 +51,11 @@ export const reducer = (state, action) => {
             let filterList = _cartList.filter((f) => f.itemId !== action.cartId)
             return {
                 cartList: filterList
+            }
+        case 'UPDATE_CART_TOTAL':
+            return {
+                ...state,
+                cartDetail: action.cartTotal
             }
         default:
             return state

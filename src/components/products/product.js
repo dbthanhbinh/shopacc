@@ -7,7 +7,7 @@ const ProductItem = (props) => {
     const handleAddToCart = (cart) => {
         let cartItem = {
             itemId: cart.id,
-            cart: cart,
+            product: cart,
             quantity: 1
         }
         addToCart(cartItem)

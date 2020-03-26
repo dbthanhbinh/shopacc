@@ -5,29 +5,29 @@ const BestSellerData = [
         id: 1,
         thumb: 'assets/images/product/3.jpg',
         name: 'Chair collection',
-        price: '$30.3',
-        discount: '$25.3'
+        price: 30.3,
+        discount: 25.3
     },
     {
         id: 2,
         thumb: 'assets/images/product/3.jpg',
         name: 'Chair collection',
-        price: '$30.3',
-        discount: '$25.3'
+        price: 30.3,
+        discount: 25.3
     },
     {
         id: 3,
         thumb: 'assets/images/product/3.jpg',
         name: 'Chair collection',
-        price: '$30.3',
-        discount: '$25.3'
+        price: 30.3,
+        discount: 25.3
     },
     {
         id: 4,
         thumb: 'assets/images/product/3.jpg',
         name: 'Chair collection',
-        price: '$30.3',
-        discount: '$25.3'
+        price: 30.3,
+        discount: 25.3
     }
 ]
 
@@ -35,23 +35,23 @@ const ProductsData = [
     {
         id: 11,
         thumb: 'assets/images/product/3.jpg',
-        name: 'Chair collection',
-        price: '$30.3',
-        discount: '$25.3'
+        name: 'Chair collection 1',
+        price: 30.3,
+        discount: 25.3
     },
     {
         id: 12,
         thumb: 'assets/images/product/3.jpg',
-        name: 'Chair collection',
-        price: '$30.3',
-        discount: '$25.3'
+        name: 'Chair collection 2',
+        price: 30.3,
+        discount: 25.3
     },
     {
         id: 13,
         thumb: 'assets/images/product/3.jpg',
-        name: 'Chair collection',
-        price: '$30.3',
-        discount: '$25.3'
+        name: 'Chair collection 3',
+        price: 30.3,
+        discount: 25.3
     },
     // {
     //     id: 14,
@@ -95,22 +95,22 @@ const TopRatedData = [
         id: 21,
         thumb: 'assets/images/product/3.jpg',
         name: 'Chair collection',
-        price: '$30.3',
-        discount: '$25.3'
+        price: 30.3,
+        discount: 25.3
     },
     {
         id: 22,
         thumb: 'assets/images/product/3.jpg',
         name: 'Chair collection',
-        price: '$30.3',
-        discount: '$25.3'
+        price: 30.3,
+        discount: 25.3
     },
     {
         id: 23,
         thumb: 'assets/images/product/3.jpg',
         name: 'Chair collection',
-        price: '$30.3',
-        discount: '$25.3'
+        price: 30.3,
+        discount: 25.3
     }
 ]
 

@@ -5,23 +5,12 @@ import {bindActionCreators} from 'redux'
 import {actionCreators} from '../../stores/cart'
 import CartEmpty from './cartEmpty'
 import CartItem from './cartItem'
+import ViewPrice from './viewPrice'
 
 const ShoppingCart = () => {
-    let cartsTotal = 0
-    let shopCartsTotal = 0
-    let itemComponents = []
-
     let {cartData} = useSelector(state => state);
-    console.log('=====666', useSelector(state => state))
     const dispatch = useDispatch(dispatch => bindActionCreators (actionCreators, dispatch));
-    let {cartList} = cartData
-    (cartDatacartList && cartList.length > 0) &&
-        cartList.forEach(cart => {
-            // let {cartItem, subTotal} = CartItem(cart, handleRemoveItem)
-            // shopCartsTotal = _.sum([shopCartsTotal, subTotal])
-            // itemComponents.push(cartItem)
-        })
-
+    
     const addToCart = (cart) => {
         dispatch({ type: 'ADD_TO_CART', cart });
     }
@@ -31,6 +20,10 @@ const ShoppingCart = () => {
 
     const removeFromCart = (cartId) => {
         dispatch({ type: 'REMOVE_FROM_CART', cartId });
+    }
+
+    const updateCartTotal = (cartTotal) => {
+        dispatch({ type: 'UPDATE_CART_TOTAL', cartTotal });
     }
 
     const miniCart = () => {
@@ -50,11 +43,22 @@ const ShoppingCart = () => {
     }
 
     const shopCarts = () => {
-        
+        let itemComponents = []
+        let _cartTotal = 0
 
-        //console.log('====gggggg', cartList.length)
-
+        let {cartList} = cartData
         
+        if(!_.isEmpty(cartList)) {
+            cartList.forEach(c => {
+                let {cartItem, subTotal} = CartItem(c, handleRemoveItem)
+                itemComponents.push(cartItem)
+                _cartTotal = _.sum([_cartTotal, subTotal])
+            })
+        }
+
+        console.log('=====666', cartData)
+
+        let {cartTotal, cartTax, cartShipping, cartCoupon, cartCouponCode, orderTotal, buyer, receiver, payment } = cartData.cartDetail
 
         return (
             <div className="cart-main-area ptb--100 bg__white">
@@ -75,7 +79,7 @@ const ShoppingCart = () => {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {/* {(cartList && cartList.length > 0) ? itemComponents : <CartEmpty />} */}
+                                            {(!_.isEmpty(cartList)) ? itemComponents : <CartEmpty />}
                                         </tbody>
                                     </table>
                                 </div>
@@ -108,16 +112,16 @@ const ShoppingCart = () => {
                                                     <li>shipping</li>
                                                     <li>use coupon</li>
                                                 </ul>
-                                                {/* <ul className="cart__price">
-                                                    <li>{ViewPrice(cartsTotal)}</li>
-                                                    <li>{ViewPrice(orderTaxTotal)}</li>
-                                                    <li>{ViewPrice(orderShippingTotal)}</li>
-                                                    <li>-{ViewPrice(couponValue)}</li>
-                                                </ul> */}
+                                                <ul className="cart__price">
+                                                    <li>{ViewPrice(cartTotal)}</li>
+                                                    <li>{ViewPrice(cartTax)}</li>
+                                                    <li>{ViewPrice(cartShipping)}</li>
+                                                    <li>-{ViewPrice(cartCoupon)}</li>
+                                                </ul>
                                             </div>
                                             <div className="cart__total">
                                                 <span>order total</span>
-                                                {/* <span>{ViewPrice(shopCartsTotal)}</span> */}
+                                                <span>{ViewPrice(orderTotal)}</span>
                                             </div>
                                             <ul className="payment__btn">
                                                 <li className="active"><a href="/">payment</a></li>

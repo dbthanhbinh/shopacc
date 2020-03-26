@@ -4,9 +4,10 @@ import ViewPrice from '../../containers/shopcarts/viewPrice'
 import {ShowThumb} from '../images/imageView'
 
 const CartItem = (cart, onRemoveItem) => {
-    let {oldPrice, price, discount, quantity, subTotal} = CalculatorCartItem(cart)
+    let {product} = cart
+    let {oldPrice, price, discount, subTotal} = CalculatorCartItem(product, cart.quantity)
     let cartItem = 
-        cart && cart.length > 0 && <tr key={cart.id}>
+        product && <tr key={product.id}>
             <td className="product-thumbnail">
                 <ShowThumb
                     permalink='/single'
@@ -14,17 +15,17 @@ const CartItem = (cart, onRemoveItem) => {
                     alt='product img'
                 />
                 </td>
-                <td className="product-name"><a href="/">{cart.name}</a>
+                <td className="product-name"><a href="/">{product.name}</a>
                 <ul  className="pro__prize">
                     <li className="old__prize">{ViewPrice(oldPrice)}</li>
                     <li>{ViewPrice(discount)}</li>
                 </ul>
             </td>
             <td className="product-price"><span className="amount">{ViewPrice(price)}</span></td>
-            <td className="product-quantity"><input type="number" defaultValue={quantity} /></td>
+            <td className="product-quantity">{cart.quantity}</td>
             <td className="product-subtotal">{ViewPrice(subTotal)}</td>
             <td className="product-remove">
-                <span onClick={typeof onRemoveItem === 'function' && onRemoveItem.bind(this, cart.id)}>
+                <span onClick={typeof onRemoveItem === 'function' && onRemoveItem.bind(this, product.id)}>
                     <i className="icon-trash icons"></i>
                 </span>
             </td>

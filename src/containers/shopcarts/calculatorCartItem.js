@@ -1,11 +1,11 @@
 import _ from 'lodash'
 
-const CalculatorCartItem = (cart) => {
+const CalculatorCartItem = (cart, quantity) => {
     let price = (cart && cart.price) ? cart.price : 0
     let oldPrice = (cart && cart.price) ? cart.price : 0
     let discount = (cart && cart.discount) ? cart.discount : 0
     let unitPrice = (cart && cart.price) ? cart.price : 0
-    let quantity = (cart && cart.quantity) ? cart.quantity : 1
+    let _quantity = (quantity) ? quantity : 1
     let subTotal = 0
 
     const getUnitPrice = (price, discount) => {
@@ -16,8 +16,8 @@ const CalculatorCartItem = (cart) => {
         return Number(discount)
     }
     unitPrice = getUnitPrice(price, discount)
-    subTotal = _.multiply(Number(unitPrice), Number(quantity))
-    return {oldPrice, price: unitPrice, discount, quantity, subTotal}
+    subTotal = _.multiply(Number(unitPrice), Number(_quantity))
+    return {oldPrice, price: unitPrice, discount, quantity: _quantity, subTotal}
 }
 
 export default CalculatorCartItem
