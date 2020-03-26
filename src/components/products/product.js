@@ -1,8 +1,18 @@
 import React from 'react'
 import {ShowThumb} from '../../components/images/imageView'
 
+
 const ProductItem = (props) => {
-    let {product, itemClassName} = props
+    let {product, itemClassName, addToCart} = props
+    const handleAddToCart = (cart) => {
+        let cartItem = {
+            itemId: cart.id,
+            cart: cart,
+            quantity: 1
+        }
+        addToCart(cartItem)
+    }
+
     if (!itemClassName) itemClassName = 'col-md-4 col-lg-3 col-sm-4 col-xs-12'
     return (
         <div className={itemClassName}>
@@ -18,7 +28,7 @@ const ProductItem = (props) => {
                     <ul className="product__action">
                         <li><a href="wishlist.html"><i className="icon-heart icons"></i></a></li>
 
-                        <li><a href="cart.html"><i className="icon-handbag icons"></i></a></li>
+                        <li><span onClick={()=>handleAddToCart(product)}><i className="icon-handbag icons"></i></span></li>
 
                         <li><a href="/"><i className="icon-shuffle icons"></i></a></li>
                     </ul>

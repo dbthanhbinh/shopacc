@@ -14,6 +14,8 @@ import CouponForm from './couponForm'
 // import ApplyShipping from './shipping'
 // import ApplyTax from './tax'
 
+import ShoppingCart from '../../components/shopping-cart'
+
 const ShopCarts = (props) => {
     let cartsTotal = 0
     let shopCartsTotal = 0
@@ -23,13 +25,17 @@ const ShopCarts = (props) => {
     let [orderTaxTotal, setOrderTaxTotal] = useState(0)
     let [orderShippingTotal, setOrderShippingTotal] = useState(0)
 
+    let {miniCart, addToCart} = ShoppingCart()
+
     // Set cart list
     useEffect (
         () => {
-            props.getCarts(CartsData)
+            props.getCarts([])
     }, [state])
     
     let {cartList} = props
+
+    console.log('====props', props)
 
     // handleRemoveItem
     const handleRemoveItem = (id) => {
